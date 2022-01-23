@@ -1,0 +1,104 @@
+.TodoForm {
+  width: 100%;
+  z-index: 10;
+  margin-bottom: -80px;
+}
+
+.infoBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoBox p {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.infoBox img {
+  cursor: pointer;
+}
+
+#form {
+  margin-top: 25px;
+  position: relative;
+  display: flex;
+}
+
+#form::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border: 2px solid hsl(220, 86%, 37%);
+  border-radius: 50%;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+#form input {
+  width: 100%;
+  padding: 20px 10px 20px 55px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #53536b;
+  color: #53536b;
+  font-size: 22px;
+  caret-color: var(--Primery-color);
+}
+
+#form input.dark {
+  background-color: "hsl(235, 24%, 19%)";
+  color: "white";
+}
+
+#form button {
+  position: relative;
+  margin-left: -20px;
+  width: 70px;
+  padding: 20px 0;
+  color: white;
+  background-color: var(--Primery-color);
+  outline: none;
+  border: 1px solid #53536b;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#form button::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 15px;
+  top: 0;
+  left: -15px;
+  background-color: hsl(220, 86%, 37%);
+}
+
+@media (max-width: 330px) {
+  #form {
+    flex-direction: column;
+  }
+  #form button {
+    width: 100%;
+    margin: auto;
+    font-size: 30px;
+    padding: 10px 0;
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+  #form button::before,
+  #form::before {
+    display: none;
+  }
+  #form input {
+    text-align: center;
+    padding-left: 0;
+  }
+}

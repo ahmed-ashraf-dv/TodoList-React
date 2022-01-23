@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --Primery-color: hsl(220, 98%, 61%);
+  --Check-Background: linear-gradient(
+    hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--Primery-color);
+  border-radius: 25px;
+  width: 10px;
+}

@@ -1,0 +1,137 @@
+.TodoList {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #53536b;
+  height: fit-content;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.TodoList .List {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.TodoList .List article {
+  border-bottom: 1px solid #53536b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  overflow-wrap: anywhere;
+}
+
+.TodoList .List article .checkBox {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid hsl(220, 86%, 37%);
+  border-radius: 50%;
+  margin-left: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.TodoList .List article .checkBox span {
+  display: block;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 60%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TodoList .List article .infoBox {
+  width: 75%;
+}
+
+.TodoList .List article .infoBox p {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.TodoList .List article .delBtn {
+  padding-right: 20px;
+}
+
+.TodoList .List article .delBtn img {
+  cursor: pointer;
+}
+
+.TodoList .List article.dark {
+  background-color: hsl(235, 24%, 19%);
+  color: #fff;
+}
+
+/* Cheked */
+.TodoList .List article.check .checkBox {
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.TodoList .List article.check .checkBox span {
+  background-image: url("../../Asset/images/icon-check.svg");
+}
+
+.TodoList .List article.check .infoBox p {
+  text-decoration: line-through;
+  color: #8a8a91;
+}
+
+.TodoList .info article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.TodoList .info article ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 15px;
+}
+
+.TodoList .info article :where(p, li a):not(p:first-of-type) {
+  color: #7e7e86;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.TodoList .info article li a:hover,
+.TodoList .info article :last-child:hover {
+  color: #565670;
+}
+
+.TodoList .info article li a.acctive {
+  color: var(--Primery-color);
+}
+
+.TodoList .info article p:first-of-type {
+  color: #7f7f8d;
+}
+
+/* Media */
+
+@media (max-width: 990px) {
+  .TodoList .info article > p {
+    display: none;
+  }
+  .TodoList .info article {
+    justify-content: center;
+  }
+  .TodoList .info article ul {
+    padding: 7px 0;
+  }
+  .TodoList .List article .infoBox p {
+    padding: 0 10px;
+  }
+}
