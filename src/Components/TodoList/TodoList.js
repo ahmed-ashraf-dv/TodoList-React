@@ -42,8 +42,7 @@ function TodoList({ allTasks, tasks, ActvTskLength, setTask, darkTheme }) {
   return (
     <div className={style.TodoList}>
       <div className={style.List}>
-        {tasks.length &&
-          tasks.map((task, idx) => (
+        {tasks.map((task, idx) => (
             <article key={idx} id={idx} className={taskClss(task)}>
               <div onClick={tglTsk} className={style.checkBox}>
                 <span></span>
