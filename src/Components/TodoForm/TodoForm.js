@@ -29,7 +29,7 @@ function Form({ setTask, darkTheme }) {
       <input
         className={darkTheme ? style.dark : {}}
         type="text"
-        placeholder="write youer task"
+        placeholder="write your task"
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
