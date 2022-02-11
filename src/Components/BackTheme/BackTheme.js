@@ -20,7 +20,7 @@ function BackThem({ darkTheme, children }) {
       </div>
       <div className={style.TodoApp}>
         <TodoApp />
-        <p className={style.thanksW}>drag and drop youer tasks {"<3"}</p>
+        <p className={style.thanksW}>drag and drop your tasks {"<3"}</p>
       </div>
     </div>
   );
