@@ -10,7 +10,7 @@ const App = () => {
   const lsTasks = JSON.parse(localStorage.getItem("tasks"));
 
   // Theme Now
-  const [darkTheme, toggleTheme] = useState(lsTheme || false);
+  const [darkTheme, toggleTheme] = useState(lsTheme || true);
 
   // State For Tasks
   const [allTasks, setTask] = useState(lsTasks || []);
