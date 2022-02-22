@@ -54,8 +54,8 @@
 }
 
 #form input.dark {
-  background-color: "hsl(235, 24%, 19%)";
-  color: "white";
+  background-color: hsl(235, 24%, 19%);
+  color: white;
 }
 
 #form button {
