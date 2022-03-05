@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import BackTheme from "./Components/BackTheme/BackTheme";
 import TodoForm from "./Components/TodoForm/TodoForm";
@@ -35,12 +35,14 @@ const App = () => {
   );
 
   // Set Fiest View
-  if (!lsTasks) {
-    setTask([
-      { text: "Hello From Todo App With React", compleate: true },
-      { text: "Made With Ahmed Ashraf (FoR3on)", compleate: false },
-    ]);
-  }
+  useEffect(() => {
+    if (!lsTasks) {
+      setTask([
+        { text: "Hello From Todo App With React", compleate: true },
+        { text: "Made With Ahmed Ashraf (FoR3on)", compleate: false },
+      ]);
+    }
+  }, []);
 
   // Set New Data In LS Every Render
   localStorage.setItem("tasks", JSON.stringify(allTasks));

@@ -13,7 +13,7 @@ function Form({ setTask, darkTheme }) {
     e.preventDefault();
 
     // Check Input Value
-    if (value === "") {
+    if (!value) {
       return alert("Please Fill The Input");
     }
 

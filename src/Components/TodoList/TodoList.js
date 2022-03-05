@@ -1,13 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import style from "./TodoList.module.css";
+import { NavLink } from "react-router-dom";
 import delBtnIco from "../../Asset/images/icon-cross.svg";
 
 function TodoList({ allTasks, tasks, ActvTskLength, setTask, darkTheme }) {
   // Delet Task Handelar
   const Deletetsk = (e) => {
     const elmentDelete = e.target.parentElement.parentElement.id;
-    setTask((prev) => prev.filter((task, idx) => idx !== +elmentDelete));
+    setTask((prev) => prev.filter((__, idx) => idx !== +elmentDelete));
   };
 
   // Toggle Task Handelar
@@ -43,18 +43,18 @@ function TodoList({ allTasks, tasks, ActvTskLength, setTask, darkTheme }) {
     <div className={style.TodoList}>
       <div className={style.List}>
         {tasks.map((task, idx) => (
-            <article key={idx} id={idx} className={taskClss(task)}>
-              <div onClick={tglTsk} className={style.checkBox}>
-                <span></span>
-              </div>
-              <div className={style.infoBox}>
-                <p onClick={tglTsk}>{task.text}</p>
-              </div>
-              <div className={style.delBtn}>
-                <img onClick={Deletetsk} src={delBtnIco} alt="" />
-              </div>
-            </article>
-          ))}
+          <article key={idx} id={idx} className={taskClss(task)}>
+            <div onClick={tglTsk} className={style.checkBox}>
+              <span></span>
+            </div>
+            <div className={style.infoBox}>
+              <p onClick={tglTsk}>{task.text}</p>
+            </div>
+            <div className={style.delBtn}>
+              <img onClick={Deletetsk} src={delBtnIco} alt="" />
+            </div>
+          </article>
+        ))}
       </div>
       <div className={style.info} style={navStyle}>
         <article>
