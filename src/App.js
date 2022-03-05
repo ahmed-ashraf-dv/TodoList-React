@@ -42,7 +42,7 @@ const App = () => {
         { text: "Made With Ahmed Ashraf (FoR3on)", compleate: false },
       ]);
     }
-  }, []);
+  }, [lsTasks]);
 
   // Set New Data In LS Every Render
   localStorage.setItem("tasks", JSON.stringify(allTasks));
